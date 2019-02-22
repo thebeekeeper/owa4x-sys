@@ -5,6 +5,7 @@ authors = ["Nick Gamroth <thebeekeeper@gmail.com>"]
 edition = "2018"
 build = "build.rs"
 description = "Low-level bindings to the C library provided to use functionality on the OWA4x embedded computer"
+license = "MIT"
 
 [dependencies]
 
