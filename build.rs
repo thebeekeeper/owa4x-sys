@@ -17,6 +17,7 @@ fn main() {
     // the resulting bindings.
     //let bindings = bindgen::Builder::default()
     let bindings = bindgen::builder()
+        .derive_default(true)
         // Do not generate unstable Rust code that
         // requires a nightly rustc and enabling
         // unstable features.
