@@ -6,6 +6,7 @@ edition = "2018"
 build = "build.rs"
 description = "Low-level bindings to the C library provided to use functionality on the OWA4x embedded computer"
 license = "MIT"
+repository = "https://github.com/thebeekeeper/owa4x-sys"
 
 [dependencies]
 
