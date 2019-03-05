@@ -11,6 +11,7 @@ fn main() {
     println!("cargo:rustc-link-lib=RTU_Module");
     println!("cargo:rustc-link-lib=IOs_Module");
     println!("cargo:rustc-link-lib=GPS2_Module");
+    println!("cargo:rustc-link-lib=INET_Module");
 
     // The bindgen::Builder is the main entry point
     // to bindgen, and lets you build up options for
@@ -28,6 +29,7 @@ fn main() {
         .clang_arg("-target")
         .clang_arg("arm-linux-gnueabihf")
         //.clang_arg("--sysroot=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf")
+        .clang_arg("-I/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/5.3.1/include")
         .clang_arg("-I/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include")
         //.clang_arg("-I/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include/gnu/")
         // Finish the builder and generate the bindings.
