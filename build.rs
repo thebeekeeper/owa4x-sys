@@ -12,6 +12,7 @@ fn main() {
     println!("cargo:rustc-link-lib=IOs_Module");
     println!("cargo:rustc-link-lib=GPS2_Module");
     println!("cargo:rustc-link-lib=INET_Module");
+    println!("cargo:rustc-link-lib=GSM_Module");
 
     // The bindgen::Builder is the main entry point
     // to bindgen, and lets you build up options for
