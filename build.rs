@@ -7,7 +7,7 @@ fn main() {
     // Tell cargo to tell rustc to link the system bzip2
     // shared library.
     //println!("cargo:rustc-link-lib=bz2");
-    println!("cargo:rustc-link-search=native=/opt/owa4x-lib/lib/");
+    println!("cargo:rustc-link-search=native=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/lib/");
     println!("cargo:rustc-link-lib=RTU_Module");
     println!("cargo:rustc-link-lib=IOs_Module");
     println!("cargo:rustc-link-lib=GPS2_Module");
@@ -30,8 +30,9 @@ fn main() {
         .clang_arg("-target")
         .clang_arg("arm-linux-gnueabihf")
         //.clang_arg("--sysroot=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf")
-        .clang_arg("-I/opt/owa4x-lib")
-        //.clang_arg("-I/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include")
+        .clang_arg("-I/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/5.3.1/include")
+        .clang_arg("-I/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include")
+        //.clang_arg("-I/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include/gnu/")
         // Finish the builder and generate the bindings.
         .generate()
         // Unwrap the Result and panic on failure.
